@@ -21,7 +21,7 @@ struct mvar_model {
  * terminated after outputting the reason of failure to the standard error
  * output.
  */
-void mvar_fit(gsl_matrix *v, int p, struct mvar_model *model, double *sbc);
+void mvar_fit(gsl_matrix *v, size_t p, struct mvar_model *model, double *sbc);
 
 /* Simulates a process following a multivariate AR(p) model. If an error
  * occurs, the process is terminated after outputting the reason of failure to
