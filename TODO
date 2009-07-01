@@ -1,0 +1,7 @@
+== Todo Tasks
+
+ * Drop dependency to GSL and use BLAS instead
+ * Add support for analysis of eigenmodes and PCA
+ * Add decent support for error reporting and handling
+ * Transfer the responsibility of resource allocation to the library user
+ * Add support for calculating the confidence levels of the MVAR(p) model fit

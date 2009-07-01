@@ -1,0 +1,6 @@
+== Version 0.1.0
+
+ * GSL is interfaced for all linear algebra operations
+ * Only simulation of multivariate AR(p) models are supported
+ * If an error occurs, the process is terminated by invoking abort(3)
+ * The test application merely invokes mvar_sim() for generating a MVAR(2) process

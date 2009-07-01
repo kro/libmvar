@@ -1,0 +1,36 @@
+== Multivariate Autoregressive Library
+
+Multivariate Autoregressive Library (libmvar) is a library written in ANSI C
+for estimating the parameters of multivariate AR models, simulation of
+multivariate AR processes, and analyzing eigenmodes of fitted multivariate AR
+models. Multivariate Autoregressive Library currently depends on GSL for its
+linear algebra operations.
+
+The algorithms implemented in libmvar are described in the publications listed
+in the reference section of this readme. For the sake of better readability,
+the variable names are chosen to match the ones used in the referred
+publications.
+
+== Availability
+
+Binaries and sources can be found on libmvar's web site:
+
+  http://libmvar.deviate.fi/
+
+== Authors
+
+Karim Osman <karim.osman@helsinki.fi>
+
+== License
+
+Multivariate Autoregressive Library is distributed under the MIT License. See
+LICENSE file for details.
+
+== References
+
+Neumaier, A. and Schneider, T. (2001), Estimation of parameters and eigenmodes
+of multivariate autoregressive models. ACM Transactions on Mathematical
+Software, 27, 1, 27-57.
+
+Schneider, T. and Neumaier, A. (2001), A Matlab package fo the estimation of
+parameters and eigenmodes of multivariate autoregressive models, 27, 1, 58-65.
