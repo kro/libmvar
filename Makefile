@@ -1,5 +1,5 @@
 LIBRARY := libmvar.a
-CFLAGS := -Wall -O3 -g
+CFLAGS := -Wall -O3 -g -ansi -pedantic
 OBJS := mvardebug.o mvardie.o mvarsim.o
 
 all: $(LIBRARY) test
