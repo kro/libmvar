@@ -4,3 +4,8 @@
  * Only simulation of multivariate AR(p) models are supported
  * If an error occurs, the process is terminated by invoking abort(3)
  * The test application merely invokes mvar_sim() for generating a MVAR(2) process
+
+== Version 0.1.1
+
+ * A shared library and Debian package are built
+ * Supports multivariate AR(p) model estimating, see mvar_fit()
