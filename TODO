@@ -5,3 +5,4 @@
  * Add decent support for error reporting and handling
  * Transfer the responsibility of resource allocation to the library user
  * Add support for calculating the confidence levels of the MVAR(p) model fit
+ * Clean up in mvar_sim() to be even somewhat readable
