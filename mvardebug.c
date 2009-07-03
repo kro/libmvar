@@ -20,6 +20,7 @@ void mvar_print_matrix(gsl_matrix *mat)
     int i, j;
 
     for (i = 0; i < mat->size1; i++) {
+        printf("[%d,] ", i + 1);
         for (j = 0; j < mat->size2; j++) {
             if (j > 0)
                  printf(",");
