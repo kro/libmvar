@@ -1,6 +1,6 @@
 LIBRARY := libmvar.a
 CFLAGS := -Wall -O3 -g -ansi -pedantic
-OBJS := mvardebug.o mvardie.o mvarsim.o mvarmat.o mvarfit.o
+OBJS := mvardebug.o mvardie.o mvarsim.o mvarmat.o mvarfit.o mvartest.o
 
 all: $(LIBRARY) test
 .PHONY: all
