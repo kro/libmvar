@@ -1,0 +1,6 @@
+libmvar (0.1.1) unstable; urgency=low
+
+  * Provides basic functionality for generating and estimating multivariate
+    AR(p) models.
+
+ -- Karim Osman <karim.osman@helsinki.fi>  Sun, 05 Jul 2009 15:23:49 +0300

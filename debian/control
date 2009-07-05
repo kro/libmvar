@@ -1,0 +1,16 @@
+Source: libmvar
+Section: libdevel
+Priority: extra
+Maintainer: Karim Osman <karim.osman@helsinki.fi>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.7.3
+Homepage: http://libmvar.deviate.fi/
+
+Package: libmvar0
+Architecture: any
+Depends: ${shlibs:Depends}, libgsl0-dev
+Description: Multivariate Autoregressive Library
+ Multivariate Autoregressive Library (libmvar) is a library written in ANSI C
+ for estimating the parameters of multivariate AR models, simulation of
+ multivariate AR processes, and analyzing eigenmodes of fitted multivariate AR
+ models. 
