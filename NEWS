@@ -9,3 +9,9 @@
 
  * A shared library and Debian package are built
  * Supports multivariate AR(p) model estimating, see mvar_fit()
+
+== Version 0.1.2
+
+ * Minor fixes in Makefile
+ * Improved implementation of mvar_sim()
+ * Supports analysis of eigenmodes of AR(p) models, see mvar_eigen()
