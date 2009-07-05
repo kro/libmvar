@@ -28,7 +28,7 @@ deb:
 	debuild -i -us -uc -b
 .PHONY: deb
 
-install:
+install: all
 	install mvar.h $(DESTDIR)/usr/include
 	install $(SHARED_LIB) $(DESTDIR)/usr/lib
 	install $(STATIC_LIB) $(DESTDIR)/usr/lib
