@@ -15,7 +15,7 @@ void mvar_mat_copy(gsl_matrix *dst, gsl_matrix *src, size_t k1, size_t k2)
 
 void mvar_mat_set_diag(gsl_matrix *mat, gsl_vector *vec)
 {
-    int i;
+    size_t i;
 
     for (i = 0; i < vec->size; i++)
         gsl_matrix_set(mat, i, i, gsl_vector_get(vec, i));
@@ -24,7 +24,7 @@ void mvar_mat_set_diag(gsl_matrix *mat, gsl_vector *vec)
 void mvar_mat_sum_sq_sqrt(gsl_matrix *mat, gsl_vector *vec)
 {
     double acc;
-    int i, j;
+    size_t i, j;
 
     for (i = 0; i < mat->size2; i++) {
         acc = 0.0;

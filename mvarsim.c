@@ -34,7 +34,7 @@ struct mvar_simulation {
  */
 static bool is_non_zero(gsl_vector *vec)
 {
-    int i;
+    size_t i;
 
     for (i = 0; i < vec->size; i++) {
         if (gsl_vector_get(vec, i) > EPSILON)
@@ -50,7 +50,7 @@ static bool is_non_zero(gsl_vector *vec)
 static void sum_mat_cols(gsl_vector *vec, gsl_matrix *mat)
 {
     double acc;
-    int i, j;
+    size_t i, j;
 
     for (i = 0; i < mat->size2; i++) {
         acc = 0.0;
@@ -64,7 +64,7 @@ static void sum_mat_cols(gsl_vector *vec, gsl_matrix *mat)
 static void complex_modulo(gsl_vector *dst, gsl_vector_complex *src)
 {
     gsl_complex z;
-    int i;
+    size_t i;
 
     for (i = 0; i < src->size; i++) {
         z = gsl_vector_complex_get(src, i);
@@ -110,8 +110,9 @@ static bool is_mvar_stable(struct mvar_model *model)
     gsl_vector *eigenvalues_mod;
     int nr_row, nr_col;
     gsl_matrix *A1;
-    int m, p, i;
     bool stable;
+    int m, p;
+    size_t i;
 
     stable = true;
     m = model->A->size1;
@@ -154,7 +155,7 @@ static gsl_matrix *cor_rv_mat(struct mvar_model *model, struct mvar_simulation *
 {
     gsl_matrix *U, *mat;
     gsl_vector *vec;
-    int i, j;
+    size_t i, j;
 
     U = gsl_matrix_alloc(model->C->size1, model->C->size2);
     gsl_matrix_memcpy(U, model->C);
@@ -182,7 +183,7 @@ static gsl_matrix *cor_rv_mat(struct mvar_model *model, struct mvar_simulation *
 static gsl_matrix *param_mat_B(struct mvar_model *model, struct mvar_simulation *sim)
 {
     gsl_matrix *B;
-    int i;
+    size_t i;
 
     B = gsl_matrix_alloc(sim->m, sim->p);
     gsl_matrix_set_identity(B);
@@ -269,7 +270,7 @@ gsl_matrix *mvar_sim(struct mvar_model *model, size_t nr_steps, gsl_rng *rng)
     struct mvar_simulation sim;
     gsl_vector_view vec_view;
     gsl_matrix_view mat_view;
-    int i, j;
+    size_t i, j;
 
     if (!is_mvar_stable(model))
         mvar_die("the specified multivariate AR model is unstable");
