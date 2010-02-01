@@ -136,7 +136,7 @@ static bool is_mvar_stable(struct mvar_model *model)
      * model is not stable. 
      */
     for (i = 0; i < eigenvalues_mod->size; i++) {
-        if (stable > 1.0) {
+        if (gsl_vector_get(eigenvalues_mod, i) > 1.0) {
             stable = false;
             break;
         }
